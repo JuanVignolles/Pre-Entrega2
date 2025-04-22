@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="header-inicio">
-        <nav class="nav-inicio">
+        <nav class="nav-inicio"> <!--navbar con links a las páginas secundarias-->
             <ul>
                 <li><a class="white" href="#">Inicio</a></li>
                 <li><a class="white" href="./pages/selecciones.html">Selecciones</a></li>
@@ -19,10 +19,13 @@
             </ul>
         </nav>
         <h1 class="titulo-inicio">RetroFútbol</h1>
-        <p class="white">¿Nostalgia por viejas camisetas? Este es tu sitio ideal para encontrarlas</p>
+        <p class="white">¿Nostalgia por viejas camisetas? Este es tu sitio ideal para encontrarlas.</p>
     </header>
+    <button class="btn btn-outline-success m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPaises" aria-controls="menuPaises">
+        Seleccionar por Ligas
+    </button> <!--sidebar para elegir productos por ligas de país-->  
     <main class="main-inicio">  
-        <section>
+        <section> <!--sección de solo productos principales de oferta-->
             <div class="productos-columna">
                 <h2>Productos Destacados</h2>
                 <div>
@@ -48,7 +51,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section> <!--sección sobre nosotros-->
             <div class="sobre-nosotros">
                 <h2>Sobre Nosotros</h2>
                 <ul>
@@ -58,8 +61,36 @@
                 </ul>
             </div>
         </section>
-    </main>   
-    <footer class="bg-dark text-white py-3 mt-5">
+    </main>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menuPaises" aria-labelledby="menuPaisesLabel"> <!--sidebar traída de bootstrap-->
+        <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="menuPaisesLabel">Ligas por Países</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+        <ul class="list-group">
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Superliga Argentina</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Brasileirao</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Bundesliga</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Serie A</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Ligue 1</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Premier League</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Eredivise</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Primeira Liga</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Super Liga Griega</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Liga Premier Rusia</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Belgian Pro League</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Superliga Turca</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Primera División de Chile</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Primera División de Uruguay</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Liga MX</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">MLS</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Saudi Pro League</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">J1 League</a></li>
+        </ul>
+        </div>
+    </div>
+    <footer class="bg-dark text-white py-3 mt-5"> <!--footer traído de bootstrap-->
         <div class="container text-center">
         <p class="mb-1 fw-semibold">RetroFútbol</p>
         <p class="mb-1 small">Camisetas clásicas para verdaderos fanáticos del fútbol.</p>

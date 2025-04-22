@@ -1,0 +1,40 @@
+@import 'variables';
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fuente-principal;
+}
+
+
+// Botones
+
+button {
+  background-color: $verde;
+  color: $blanco;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+  button:hover {
+    background-color: $verde-oscuro;
+  }
+
+
+// Tamaño adaptado para mobile
+  @media (max-width: 480px) {
+    button{
+      font-size: $titulo-pequeño;
+      padding: 8px 12px;
+    }
+  }
+
+
+// Footer
+
+footer {
+  padding-top: 50px;
+}

@@ -1,0 +1,141 @@
+@import 'variables';
+
+// Estilos para las páginas secundarias
+
+.flex-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-position: center;
+  height: 150px;
+  background-color: $gris-claro;
+
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1b1b1b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    border-bottom: 4px solid $verde;
+    padding-bottom: 5px;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+
+      li {
+        a {
+          text-decoration: none;
+          font-weight: 600;
+          color: #333;
+          padding: 8px 12px;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: $verde;
+            color: $blanco;
+          }
+        }
+      }
+    }
+  }
+}
+
+.flex-oferta {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 40px;
+
+  .oferta-imagen {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .oferta-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    max-height: fit-content;
+    @extend .card;
+    width: 30%;
+  }
+}
+
+.grid-ofertas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+
+  > div {
+    @extend .card;
+
+    img {
+      width: 50%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+}
+
+// Mediaqueries para Tablet
+
+@media (max-width: 768px) {
+  .flex-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 10px;
+
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+
+      li a {
+        font-size: $titulo-muypequeño;
+      }
+    }
+
+    h1 {
+      font-size: $titulo-pequeño;
+    }
+  }
+}
+
+// Mediaquerias para Mobile
+
+@media (max-width: 480px) {
+  .flex-header {
+    h1 {
+      font-size: $titulo-mediano;
+      letter-spacing: 1px;
+      padding-bottom: 4px;
+    }
+
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+      li a {
+      font-size: $titulo-pequeño;
+      padding: 6px 10px;
+    }
+  }
+}
