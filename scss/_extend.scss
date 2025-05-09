@@ -1,9 +1,10 @@
 @import 'variables';
 
 .card{
-  background-color: $gris-medio;
+  background-color: $transparencia2;
   border: 1px solid $negro;
   padding: 15px;
   border-radius: 10px;
   text-align: center;
+  color: $blanco;
 }

@@ -10,16 +10,16 @@
   padding: 20px 40px;
   background-position: center;
   height: 150px;
-  background-color: $gris-claro;
+  background-image: url(../img/background2.jpg);
 
   h1 {
-    font-size: 2.8rem;
+    font-size: $titulo-grande;
     font-weight: 700;
-    color: #1b1b1b;
+    color: $blanco;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0;
-    border-bottom: 4px solid $verde;
+    border-bottom: 4px solid $verde-claro;
     padding-bottom: 5px;
   }
 
@@ -36,13 +36,13 @@
         a {
           text-decoration: none;
           font-weight: 600;
-          color: #333;
+          color: $blanco;
           padding: 8px 12px;
           border-radius: 5px;
           transition: all 0.3s ease;
 
           &:hover {
-            background-color: $verde;
+            background-color: $verde-claro;
             color: $blanco;
           }
         }
@@ -50,18 +50,30 @@
     }
   }
 }
-
+.main-selecciones{
+  background-image: url(/img/background5.jpg);
+}
+.main-clubes{
+  background-image: url(/img/background6.jpg);
+}
+.main-balones{
+  background-image: url(/img/background7.jpg);
+}
+.main-contacto{
+  background-image: url(/img/background8.jpg);
+}
 .flex-oferta {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
   padding: 20px;
   gap: 40px;
 
   .oferta-imagen {
-    width: 60%;
+    width: 30%;
     height: auto;
     border-radius: 10px;
+    @extend .card;
   }
 
   .oferta-texto {
@@ -71,8 +83,12 @@
     gap: 10px;
     max-height: fit-content;
     @extend .card;
-    width: 30%;
+    width: 20%;
   }
+}
+h2{
+  text-align: center;
+  padding: 20px;
 }
 
 .grid-ofertas {
@@ -111,12 +127,36 @@
         font-size: $titulo-muypequeño;
       }
     }
-
+  }
     h1 {
       font-size: $titulo-pequeño;
     }
+    .flex-oferta {
+      flex-direction: column;
+      align-items: center;
+  
+      .oferta-imagen {
+        width: 100%;
+      }
+  
+      .oferta-texto {
+        width: 100%;
+      }
+    } 
+    .grid-ofertas {
+      grid-template-columns: repeat(2, 1fr);
+  
+      > div {
+        text-align: center;
+  
+        img {
+          width: 80%;
+      }
+    }
   }
 }
+
+
 
 // Mediaquerias para Mobile
 
@@ -136,6 +176,13 @@
       li a {
       font-size: $titulo-pequeño;
       padding: 6px 10px;
+    }
+  }
+  .grid-ofertas {
+      grid-template-columns: 1fr;
+  
+    > div img {
+        width: 100%;
     }
   }
 }
